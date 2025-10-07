@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo To-Do App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container" id="app" aria-labelledby="app-title">
+    <header class="app-header">
+      <h1 id="app-title">To-Do List </h1>
+
+    </header>
+
+    <section class="card" aria-label="To do application">
+      <form id="task-form" autocomplete="off" aria-label="Add task form">
+        <label for="task-input" class="sr-only">New task</label>
+        <input id="task-input" name="task" type="text" placeholder="Add a new task and press Enter" />
+        <button type="submit" class="btn primary">Add</button>
+      </form>
+
+      <div class="toolbar">
+        <div class="filters" role="tablist" aria-label="Filter tasks">
+          <button class="filter-btn active" data-filter="all" role="tab">All</button>
+          <button class="filter-btn" data-filter="active" role="tab">Active</button>
+          <button class="filter-btn" data-filter="completed" role="tab">Completed</button>
+        </div>
+
+        <div class="search-clear">
+          <input id="search" type="search" placeholder="Search tasks..." aria-label="Search tasks" />
+          <button id="clear-completed" class="btn">Clear completed</button>
+        </div>
+      </div>
+
+      <ul id="task-list" class="task-list" role="list" aria-live="polite"></ul>
+
+      <div class="card-footer">
+        <span id="count" aria-live="polite">0 tasks</span>
+        <span class="hint">Double-click a task to edit • Press Enter to save</span>
+      </div>
+    </section>
+
+    <footer class="small">
+      Assignment project done by Jyothis John
+    </footer>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
